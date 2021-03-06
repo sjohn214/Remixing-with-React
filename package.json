@@ -1,7 +1,7 @@
 {
-  "name": "Remixing-with-React",
+  "name": "remixing-with-react",
   "version": "1.0.0",
-  "description": "Using a previous homework assignments, we will reimplement it using React.",
+  "description": "Using a previous homework assignment, we will reimplement it using React.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/sjohn214/Remixing-with-React#readme",
   "dependencies": {
     "reactdom": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13"
   }
 }
