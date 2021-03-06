@@ -5,8 +5,9 @@ import React, {
 import axios from 'axios';
 
 
-export default function Searchbar(props) {
-    const urlAPI = `https://api.openweathermap.org/data/2.5/weather?q=${props}&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial`
+export default function Searchbar() {
+    const BASEURL = "https://api.openweathermap.org/data/2.5/weather?q="
+    const APIKEY = "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial"
     const [searchValue, setSearch] = useState("");
     const [response, setResponse] = useState("");
 
@@ -14,8 +15,8 @@ export default function Searchbar(props) {
 
     }, [response]);
 
-    function callWeatherAPI() {
-        axios.get(urlAPI).then(res => {
+    function callWeatherAPI(query) {
+        axios.get(BASEURL + query + APIKEY).then(res => {
             console.log(res);
             setResponse(res);
         });
@@ -28,12 +29,8 @@ export default function Searchbar(props) {
 
     return ( 
         <div className = "maincontainer" >
-        <div className = "card-header"
-        style = {
-            {
-                backgroundColor: "rgb (11, 161, 116)"
-            }
-        } >
+        <div className = "card-header">
+        
         <h1> Search for a city </h1> 
         </div> 
         <input className = "searchbar"

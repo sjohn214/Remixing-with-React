@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
-
+import Card from './components/Card';
 
 
 
@@ -10,6 +10,7 @@ function App() {
    <div className="App">
      <Navbar />
      <Searchbar />
+     <Card />
    </div>
   );
 }

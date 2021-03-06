@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sjohn214/Remixing-with-React/issues"
   },
-  "homepage": "https://github.com/sjohn214/Remixing-with-React#readme"
+  "homepage": "https://github.com/sjohn214/Remixing-with-React#readme",
+  "dependencies": {
+    "reactdom": "^2.0.0"
+  }
 }
