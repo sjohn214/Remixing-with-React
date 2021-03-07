@@ -5,6 +5,7 @@ import Searchbar from "./components/SearchForm/index";
 import SearchResults from "./components/SearchResults/index";
 import Conditions from "./components/Conditions/index";
 import Card from "./components/Card/index";
+import Footer from "./components/Footer/index";
 import axios from "axios";
 
 const BASEURL = "https://api.openweathermap.org/data/2.5/weather?q="
@@ -23,7 +24,11 @@ function App() {
 };
 
 useEffect(() => {
-        
+  callWeatherAPI("Seattle");      
+}, []);
+
+useEffect(() => {
+  console.log(response);      
 }, [response]);
 
 
@@ -34,6 +39,19 @@ useEffect(() => {
      <Card />
      <SearchResults response={response}/>
      <Conditions response={response}/>
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <Footer />
+    
      
    </div>
   );
