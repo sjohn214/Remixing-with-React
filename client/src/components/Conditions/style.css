@@ -1,6 +1,11 @@
 .Small {
     color: red;
 }
+
+.img {
+    width: 70px;
+    height: 70px;
+}
 /* this code was pulled from
 https://www.w3schools.com/howto/howto_css_loader.asp */
 .Loader {

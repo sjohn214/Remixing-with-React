@@ -10,7 +10,7 @@ import axios from "axios";
 
 const BASEURL = "https://api.openweathermap.org/data/2.5/weather?q="
 const APIKEY = "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial"
-
+const UVindex = require("./components/UVindex/index")
 
 function App() {
   const [response, setResponse] = useState("");
@@ -38,7 +38,7 @@ useEffect(() => {
      <Searchbar callWeatherAPI={callWeatherAPI}/>
      <Card />
      <SearchResults response={response}/>
-     <Conditions response={response}/>
+     <Conditions response={response} UVindex={UVindex}/>
      <br />
      <br />
      <br />
