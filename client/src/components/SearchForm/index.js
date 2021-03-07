@@ -1,27 +1,10 @@
-import React, {
-    useState,
-    useEffect
-} from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import "./style.css";
 
 
 export default function Searchbar() {
-    const BASEURL = "https://api.openweathermap.org/data/2.5/weather?q="
-    const APIKEY = "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial"
+
     const [searchValue, setSearch] = useState("");
-    const [response, setResponse] = useState("");
-
-    useEffect(() => {
-
-    }, [response]);
-
-    function callWeatherAPI(query) {
-        axios.get(BASEURL + query + APIKEY).then(res => {
-            console.log(res);
-            setResponse(res);
-        });
-    };
 
     function HandleChange(event) {
         setSearch(event.target.value);
