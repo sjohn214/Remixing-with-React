@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Using a previous homework assignment, we will reimplement it using React.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/sjohn214/Remixing-with-React#readme",
   "dependencies": {
-    "reactdom": "^2.0.0"
+    "reactdom": "^2.0.0",
+    "weather-icons-react": "^1.2.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.12.13",

@@ -3,6 +3,7 @@ import React, {
     useEffect
 } from "react";
 import axios from "axios";
+import "./style.css";
 
 
 export default function Searchbar() {
