@@ -4,17 +4,36 @@ import classes from "./style.css";
 const Conditions = (props) => {
     return (
         <div className={classes.Wrapper}>
-            {props.error && <small className={classes.Small}>Please enter a valid city.</small>}
+            {props.error && (
+            <small className={classes.Small}>Please enter a valid city.</small>
+            )}
            {props.loading && <div className={classes.Loader} />}
-        
-               <div>
-                   <p><strong>{props.data.name}</strong></p>
-                   <p>It is currently {Math.round(props.data.temp)} degrees out with {props.data.weather[0].description.icon.main}.</p>
-                   <p>The current Wind Speed is {props.data.wind.speed}</p>
+           {props.response ? <div>
+                   <p>
+                       <strong>{props.response.data?.name}</strong>
+                    </p>
+                   <p>
+                       It is currently {Math.round(props.response.data?.main.temp)} degrees out with {""}.
+                       <img 
+                        alt="weather icon"
+                        src={`http://openweathermap.org/img/w/${props.response.data?.weather[0].icon}.png`}/>
+                    </p>
+                    <p>
+                        The current Humidity is {props.response.data?.main.humidity} 
+                    </p>
+                   <p>
+                       The current Wind Speed is {props.data.wind.speed}
+                    </p>
+                    <p>
+                        Today's UV Index is
+                        {/* <link src={`https://api.openweathermap.org/data/2.5/uvi?appid=29e4875c9bed2b0310851289abe5a5e1&lat=${props.response.data?.coord.lat}&lon=${props.response.data?.coord.lon}`} */}
+                    </p>
+                    
                </div>
-           : null
+           : "There is no Weather Data"}
             
         </div>
-    )
+    );
 }
+
 export default Conditions;
