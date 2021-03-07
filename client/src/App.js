@@ -23,11 +23,7 @@ function App() {
 };
 
 useEffect(() => {
-  callWeatherAPI("Charlotte");
-}, []);
-
-useEffect(() => {
-  console.log(response);
+        
 }, [response]);
 
 

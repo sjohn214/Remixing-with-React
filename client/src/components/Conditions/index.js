@@ -10,19 +10,20 @@ const Conditions = (props) => {
            {props.loading && <div className={classes.Loader} />}
            {props.response ? <div>
                    <p>
-                       <strong>{props.response.data?.name}</strong>
+                       <strong>{props.response.data?.name} {""}</strong>
                     </p>
-                   <p>
-                       It is currently {Math.round(props.response.data?.main.temp)} degrees out with {""}.
-                       <img 
+                    <br />
+                    <img 
                         alt="weather icon"
                         src={`http://openweathermap.org/img/w/${props.response.data?.weather[0].icon}.png`}/>
+                   <p>
+                       It is currently {Math.round(props.response.data?.main.temp)} degrees outside with,
                     </p>
                     <p>
-                        The current Humidity is {props.response.data?.main.humidity} 
+                        a Humidity reading of {props.response.data?.main.humidity}. 
                     </p>
                    <p>
-                       The current Wind Speed is {props.data.wind.speed}
+                       The current Wind Speed is {props.response.data?.wind.speed}
                     </p>
                     <p>
                         Today's UV Index is
