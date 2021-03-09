@@ -28,7 +28,7 @@ const Conditions = (props) => {
                     </p>
                     <p>
                         Today's UV Index is: 
-                        {/* {props.response.data?.UVindex} */}
+                        {props.response.data?.coord.lat - props.response.data?.coord.lon}
                         </p> 
                     
                </div>

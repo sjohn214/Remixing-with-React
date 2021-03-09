@@ -4,9 +4,7 @@ import axios from "axios";
 
 const Forecast = () => {
  let [responseObj, setResponseObj] = useState({});
-
-
-function getForecast() {
+  let [UVresponse, setUVResponse] = useState({});
 
 const options = {
   method: "GET",
@@ -30,17 +28,45 @@ const options = {
   })
 };
 
+const getUVindex = {
+  method: "GET",
+  url: `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`,
+  params: {
+    q:  "[]",
+    lat: "",
+    lon: "",
+    appid: "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial",
+    lang: "null",
+    units: "imperial",
+    mode: "xml, html"
+  }.then(response => response.json())
+  .then(response => {
+    setUVResponse(response);
+  })
+
+};
+
 axios.request(options).then(function (response) {
 	console.log(response.data);
 }).catch(function (error) {
 	console.error(error);
 });
+
+axios.request(getUVindex).then(function (UVresponse) {
+  console.log(UVresponse.data);
+}).catch(function (error){
+  console.error(error);
+});
+
     return (
         <div className="DailyForecast">
             {JSON.stringify(responseObj)}
-            <getForecast />  
+            <p className="UVindex">
+              {JSON.stringify(UVresponse)}
+            </p>
         </div>
+        
     )
 }
-}
+
 export default Forecast;
