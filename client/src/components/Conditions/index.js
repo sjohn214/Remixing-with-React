@@ -18,18 +18,26 @@ const Conditions = (props) => {
                         alt="weather icon"
                         src={`http://openweathermap.org/img/w/${props.response.data?.weather[0].icon}.png`}/>
                    <p>
-                       It is currently {Math.round(props.response.data?.main.temp)} degrees outside with, {props.response.data?.weather[0].description}.
+                        It is currently {Math.round(props.response.data?.main.temp)}° degrees outside with, {props.response.data?.weather[0].description} <br />
+                        and it feels like {Math.round(props.response.data?.main.feels_like)}° degrees.                    
                     </p>
                     <p>
-                        There is a Humidity reading of {props.response.data?.main.humidity}. 
+                        There is a Humidity reading of {props.response.data?.main.humidity}%. 
+                    </p>
+                    <p>
+                        The atmospheric pressure reads {props.response.data?.main.pressure} kPa.
                     </p>
                    <p>
-                       The current Wind Speed is {props.response.data?.wind.speed}
+                       The current Wind Speed is {props.response.data?.wind.speed} mph.
                     </p>
                     <p>
+                        The high temperature will be {Math.round(props.response.data?.main.temp_max)}° degrees, <br />
+                        with a low temperature {Math.round(props.response.data?.main.temp_min)}° degrees.
+                    </p>
+                    {/* <p>
                         Today's UV Index is: 
-                        {props.response.data?.coord.lat - props.response.data?.coord.lon}
-                        </p> 
+                        {props.response.data?.UVresponse}
+                        </p>  */}
                     
                </div>
            : "There is no Weather Data"}

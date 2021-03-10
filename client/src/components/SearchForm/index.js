@@ -16,7 +16,7 @@ export default function Searchbar(props) {
         <div className = "maincontainer" >
         <div className = "card-header">
         
-        <h1> Search for a city </h1> 
+        <h2 className="citysearch"> Search for a city </h2> 
         </div> 
         <input className = "searchbar"
         type = "text"

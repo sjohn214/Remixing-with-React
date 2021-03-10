@@ -14,57 +14,51 @@ const APIKEY = "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial"
 
 function App() {
   const [response, setResponse] = useState("");
-  // const [UVresponse, setUVResponse] = useState("");
+  const [UVresponse, setUVResponse] = useState("");
 
   const callWeatherAPI = (query) => {
     axios.get(BASEURL + query + APIKEY).then(res => {
         console.log(res);
         setResponse(res);
+        getUVindex(res.data.coord.lat , res.data.coord.lon);
     });
 };
 
-  // const getUVindex = (lat, lon) => {
-  //   const UVINDEX = `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
-  //   axios.get(UVINDEX).then(res => {
-  //     console.log(res);
-  //     setUVResponse(res);
-  //   })
-  // }
+  const getUVindex = (lat, lon) => {
+    const UVINDEX = `https://api.openweathermap.org/data/2.5/uvi?appid=29e4875c9bed2b0310851289abe5a5e1&lat=${lat}&lon=${lon}`
+    axios.get(UVINDEX).then(res => {
+      
+      setUVResponse(res);
+    })
+  }
 
 useEffect(() => {
   callWeatherAPI("Charlotte");      
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
 useEffect(() => {
-  console.log(response);      
+       
 }, [response]);
 
 // useEffect(() => {
 //   getUVindex(UVresponse.data.coord.lat , UVresponse.data.coord.lon);
 // })
   return (
-   <div className="App">
-     <Navbar />
+    <div className="App">
+      <Card className="card"/>
+     <Navbar className="navbar"/>
      <Searchbar callWeatherAPI={callWeatherAPI}/>
-     <Card />
      <SearchResults response={response}/>
      <h5 className="moment">{moment().format('MMMM Do YYYY, h:mm a')}</h5>
-     <Conditions response={response}/>
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
+     <Conditions response={response} UVresponse={UVresponse}/>
      <br />
      <br />
      <br />
      <br />
      <Footer />
     
-     
-   </div>
+     </div> 
   );
 }
 

@@ -30,7 +30,7 @@ const options = {
 
 const getUVindex = {
   method: "GET",
-  url: `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`,
+  url: `http://api.openweathermap.org/data/2.5/uvi?`,
   params: {
     q:  "[]",
     lat: "",
