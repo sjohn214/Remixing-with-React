@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/sjohn214/Remixing-with-React/static/css/main.a1b83a10.chunk.css",
-    "main.js": "/sjohn214/Remixing-with-React/static/js/main.dae5863c.chunk.js",
-    "main.js.map": "/sjohn214/Remixing-with-React/static/js/main.dae5863c.chunk.js.map",
-    "runtime-main.js": "/sjohn214/Remixing-with-React/static/js/runtime-main.7a0c3547.js",
-    "runtime-main.js.map": "/sjohn214/Remixing-with-React/static/js/runtime-main.7a0c3547.js.map",
-    "static/js/2.8382af05.chunk.js": "/sjohn214/Remixing-with-React/static/js/2.8382af05.chunk.js",
-    "static/js/2.8382af05.chunk.js.map": "/sjohn214/Remixing-with-React/static/js/2.8382af05.chunk.js.map",
-    "static/js/3.d19155c4.chunk.js": "/sjohn214/Remixing-with-React/static/js/3.d19155c4.chunk.js",
-    "static/js/3.d19155c4.chunk.js.map": "/sjohn214/Remixing-with-React/static/js/3.d19155c4.chunk.js.map",
-    "index.html": "/sjohn214/Remixing-with-React/index.html",
-    "static/css/main.a1b83a10.chunk.css.map": "/sjohn214/Remixing-with-React/static/css/main.a1b83a10.chunk.css.map",
-    "static/js/2.8382af05.chunk.js.LICENSE.txt": "/sjohn214/Remixing-with-React/static/js/2.8382af05.chunk.js.LICENSE.txt"
+    "main.css": "/sjohn214/Remixing-with-React.git/static/css/main.a1b83a10.chunk.css",
+    "main.js": "/sjohn214/Remixing-with-React.git/static/js/main.dae5863c.chunk.js",
+    "main.js.map": "/sjohn214/Remixing-with-React.git/static/js/main.dae5863c.chunk.js.map",
+    "runtime-main.js": "/sjohn214/Remixing-with-React.git/static/js/runtime-main.8c89a00d.js",
+    "runtime-main.js.map": "/sjohn214/Remixing-with-React.git/static/js/runtime-main.8c89a00d.js.map",
+    "static/js/2.8382af05.chunk.js": "/sjohn214/Remixing-with-React.git/static/js/2.8382af05.chunk.js",
+    "static/js/2.8382af05.chunk.js.map": "/sjohn214/Remixing-with-React.git/static/js/2.8382af05.chunk.js.map",
+    "static/js/3.d19155c4.chunk.js": "/sjohn214/Remixing-with-React.git/static/js/3.d19155c4.chunk.js",
+    "static/js/3.d19155c4.chunk.js.map": "/sjohn214/Remixing-with-React.git/static/js/3.d19155c4.chunk.js.map",
+    "index.html": "/sjohn214/Remixing-with-React.git/index.html",
+    "static/css/main.a1b83a10.chunk.css.map": "/sjohn214/Remixing-with-React.git/static/css/main.a1b83a10.chunk.css.map",
+    "static/js/2.8382af05.chunk.js.LICENSE.txt": "/sjohn214/Remixing-with-React.git/static/js/2.8382af05.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7a0c3547.js",
+    "static/js/runtime-main.8c89a00d.js",
     "static/js/2.8382af05.chunk.js",
     "static/css/main.a1b83a10.chunk.css",
     "static/js/main.dae5863c.chunk.js"
