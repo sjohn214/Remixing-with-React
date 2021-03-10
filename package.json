@@ -7,7 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd client && npm install",
-    "start": "cd client && npm run start"
+    "start": "cd client && npm run start && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/sjohn214/Remixing-with-React#readme",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "reactdom": "^2.0.0",
     "weather-icons-react": "^1.2.0"
   },
