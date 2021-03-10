@@ -20,7 +20,7 @@ const options = {
     mode: "xml, html"
   },
   headers: {
-    "x-rapidapi-key": "4078dc68bdmshef1e53ae072de80p155299jsn18e985c65187",
+    "x-rapidapi-key": process.env.REACT_APP_API_KEY155299jsn18e985c65187,
     "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
   }.then(response => response.json())
   .then(response => {
@@ -30,12 +30,12 @@ const options = {
 
 const getUVindex = {
   method: "GET",
-  url: `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`,
+  url: `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9`,
   params: {
     q:  "[]",
     lat: "",
     lon: "",
-    appid: "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial",
+    appid: process.env.REACT_APP_API_KEY,
     lang: "null",
     units: "imperial",
     mode: "xml, html"

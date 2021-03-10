@@ -10,33 +10,34 @@ import axios from "axios";
 import moment from "moment";
 
 const BASEURL = "https://api.openweathermap.org/data/2.5/weather?q="
-const APIKEY = "&appid=29e4875c9bed2b0310851289abe5a5e1&units=imperial"
+const APIKEY = process.env.REACT_AP_API_KEY
 
 function App() {
   const [response, setResponse] = useState("");
-  // const [UVresponse, setUVResponse] = useState("");
+  const [UVresponse, setUVResponse] = useState("");
 
   const callWeatherAPI = (query) => {
     axios.get(BASEURL + query + APIKEY).then(res => {
-        console.log(res);
         setResponse(res);
+        getUVindex(res.data.coord.lat , res.data.coord.lon);
     });
 };
 
-  // const getUVindex = (lat, lon) => {
-  //   const UVINDEX = `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
-  //   axios.get(UVINDEX).then(res => {
-  //     console.log(res);
-  //     setUVResponse(res);
-  //   })
-  // }
+  const getUVindex = (lat, lon) => {
+    const UVINDEX = `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
+    axios.get(UVINDEX + APIKEY).then(res => {
+      console.log(res);
+      setUVResponse();
+    })
+  }
 
 useEffect(() => {
-  callWeatherAPI("Charlotte");      
+  callWeatherAPI("Paris");      
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
 useEffect(() => {
-  console.log(response);      
+  
 }, [response]);
 
 // useEffect(() => {
@@ -49,7 +50,7 @@ useEffect(() => {
      <Card />
      <SearchResults response={response}/>
      <h5 className="moment">{moment().format('MMMM Do YYYY, h:mm a')}</h5>
-     <Conditions response={response}/>
+     <Conditions response={response} UVresponse={UVresponse}/>
      <br />
      <br />
      <br />
