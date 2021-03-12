@@ -22,7 +22,7 @@ To create a city search forecast application that searches for any location's we
 ![Remixing with React Forecast Dashboard gif](../Remixing-with-React/client/src/img/remix.gif) Remixing-with-React gif
 
 ## Live URL:
-<a href="https://sjohn214.github.io/ForecastDashboard/">Reming-with-React Forecast Dashboard Git Pages</a>
+<a href="https://sjohn214.github.io/Remixing-with-React/">Reming-with-React Forecast Dashboard Git Pages</a>
 
 <a href="https://github.com/sjohn214/Remixing-with-React.git">Reming-with-React Forecast Dashboard GitHub Repo</a>
 
